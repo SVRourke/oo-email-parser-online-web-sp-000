@@ -9,14 +9,14 @@ class EmailAddressParser
     @emails = emails
   end
 
-  # def parse    
+  # def parse
   #   if emails.split(", ")[0] == @emails
   #     emails.split(" ")
   #   else
   #     emails.split(", ")
   #   end
   # end
-  
+
   def parse
     results = Array.new
     @emails.split(", ").each do |chunk|
