@@ -9,12 +9,23 @@ class EmailAddressParser
     @emails = emails
   end
 
+  # def parse    
+  #   if emails.split(", ")[0] == @emails
+  #     emails.split(" ")
+  #   else
+  #     emails.split(", ")
+  #   end
+  # end
+  
   def parse
-    if emails.split(", ")[0] == @emails
-      emails.split(" ")
-    else
-      emails.split(", ")
+    results = Array.new
+    @emails.split(", ").each do |chunk|
+      if chunk.include?(" ")
+        chunk.split(" ").each {|email| results << email}
+      else
+        results << chunk
+      end
     end
   end
-
 end
+# "avi@test.com, arel@test.com test@avi.com, test@arel.com"
