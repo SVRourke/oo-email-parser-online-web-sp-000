@@ -10,7 +10,7 @@ class EmailAddressParser
   end
 
   def parse
-    if emails.split(", ") == @emails
+    if emails.split(", ")[0] == @emails
       emails.split("  ")
     else
       emails.split(", ")
