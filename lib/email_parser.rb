@@ -26,6 +26,7 @@ class EmailAddressParser
         results << chunk
       end
     end
+    results
   end
 end
 # "avi@test.com, arel@test.com test@avi.com, test@arel.com"
