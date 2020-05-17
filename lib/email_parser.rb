@@ -20,7 +20,7 @@ class EmailAddressParser
   #   end
   #   results.uniq
   # end
-  
+
   def parse
     @emails.split(", ").collect do |chunk|
       if chunk.include?(" ")
@@ -30,6 +30,6 @@ class EmailAddressParser
       end
     end
 end
-  
+
 end
 # "avi@test.com, arel@test.com test@avi.com, test@arel.com"
